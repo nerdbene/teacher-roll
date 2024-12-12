@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherRoll</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <span class="emoji">🎲</span>
+                <span class="app-name">TeacherRoll</span>
+                <a href="https://github.com/nerdbene/teacher-dice" class="github-button" target="_blank">
+                    <i class="fab fa-github"></i> Source Code
+                </a>
+            </div>
+            <div class="nav-right">
+                <span class="creator-info">by Bene - 2024</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="setup-container">
+            <h2>Customize Your Die</h2>
+            <div class="dice-settings">
+                <div class="form-group">
+                    <label for="diceType">Number of Sides:</label>
+                    <select id="diceType">
+                        <option value="4">4 Sides</option>
+                        <option value="6" selected>6 Sides</option>
+                        <option value="8">8 Sides</option>
+                        <option value="12">12 Sides</option>
+                        <option value="20">20 Sides</option>
+                    </select>
+                </div>
+
+                <div id="sideCustomization">
+                    <!-- Sides will be dynamically added here -->
+                </div>
+
+                <div class="form-group">
+                    <label>Side Style:</label>
+                    <div class="style-options">
+                        <button class="style-btn active" data-style="text">
+                            <i class="fas fa-font"></i> <span>Text</span>
+                        </button>
+                        <button class="style-btn" data-style="color">
+                            <i class="fas fa-palette"></i> <span>Color</span>
+                        </button>
+                        <button class="style-btn" data-style="image">
+                            <i class="fas fa-image"></i> <span>Image</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button id="saveSettings" class="primary-btn">
+                    <i class="fas fa-save"></i> <span>Save Settings</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="dice-container">
+            <div id="dice" class="dice">
+                <!-- Dice faces will be added here -->
+            </div>
+            <button id="rollButton" class="roll-btn">
+                <i class="fas fa-dice"></i> <span>Roll Die</span>
+            </button>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
